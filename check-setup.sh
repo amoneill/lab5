@@ -16,7 +16,7 @@ cur_lab=5
 system=$(uname -a | cut -d' ' -f1,2)
 if [ "$system" == "Linux precise32" ] || [ "$system" == "Linux vagrant-ubuntu-trusty-64" ]
 then
-  sys_vagrant="1"  
+  sys_vagrant="1"
   echo "Running on Vagrant guest"
 
   user=$(whoami)
@@ -96,7 +96,7 @@ then
 
   if [ "$node_missing" == "1" ]
   then
-    echo "Installing nodejs"    
+    echo "Installing nodejs"
     node_res=$(/home/vagrant/introHCI/nodejs.sh)
     node_loc=$(which node)
     if [ "${#node_loc}" == "0" ]
@@ -109,7 +109,7 @@ then
 
   if [ "$npm_missing" == "1" ]
   then
-    echo "Installing npm"  
+    echo "Installing npm"
     npm_res=$(/home/vagrant/introHCI/nodejs.sh)
     npm_loc=$(which npm)
     if [ "${#npm_loc}" == "0" ]
@@ -186,7 +186,7 @@ else
   hcidirs=$(ls)
 
   # current lab hardcoded
-  for i in {1..4} 
+  for i in {1..4}
   do
     target_dir="lab$i"
   if [[ $hcidirs == *"$target_dir"* ]]
